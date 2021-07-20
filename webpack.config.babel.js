@@ -5,6 +5,7 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -75,19 +76,19 @@ module.exports = {
         exclude: /(node_modules)/,
         use: 'babel-loader',
       },
-      // {
-      //   test: /\.css?$/,
-      //   use: [
-      //     // 'style-loader',
-      //     MiniCssExtractPlugin.loader,
-      //     {
-      //       loader: 'css-loader',
-      //       options: {
-      //         sourceMap: false,
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        test: /\.css?$/,
+        use: [
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false,
+            },
+          },
+        ],
+      },
       // {
       //   test: /\.(scss|sass)$/,
       //   use: [
@@ -198,10 +199,10 @@ module.exports = {
     //   // to `true` copies all files.
     //   copyUnmodified: false,
     // }),
-    // new MiniCssExtractPlugin({
-    //   filename: isProd ? '[name].[hash].css' : '[name].bundle.css',
-    //   chunkFilename: isProd ? '[name].[contenthash].css' : '[name].bundle.css',
-    // }),
+    new MiniCssExtractPlugin({
+      filename: isProd ? '[name].[hash].css' : '[name].bundle.css',
+      chunkFilename: isProd ? '[name].[contenthash].css' : '[name].bundle.css',
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       // favicon: './src/assets/favicon32.png',
