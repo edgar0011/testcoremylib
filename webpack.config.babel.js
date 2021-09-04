@@ -13,7 +13,7 @@ module.exports = {
   // context: path.join(__dirname, 'src'),
   devServer: {
     historyApiFallback: true,
-    // contentBase: path.join(__dirname, './dist'),
+    // contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: process.env.PORT || 9000,
     hot: true,
