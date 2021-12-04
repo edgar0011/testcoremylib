@@ -2424,9 +2424,9 @@ core-js@^3.1.4, core-js@^3.15.2:
   integrity sha512-ciYCResnLIATSsXuXnIOH4CbdfgV+H1Ltg16hJFN7/v6OxqnFr/IFGeLacaZ+fHLAm0TBbXwNK9/DNBzBUrO/g==
 
 core-my-lib@^1.0.7:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/core-my-lib/-/core-my-lib-1.3.1.tgz#4a1f340b1c6daeae4afdabf72b42356537932ee2"
-  integrity sha512-1BT78lIUNtPfvdsIYpV4VIiSnYtFKakhLFijUyI8A+XX7oaRGevJpu/kMgSAnOI90WwcnGT5VPyimhRo9XfRsQ==
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/core-my-lib/-/core-my-lib-1.3.2.tgz#6da5b01060734f511022911ebcf9395ebd486186"
+  integrity sha512-mivfsbEHGeNMqJtMNaEzvQqXN0afSJLI53l3PtFCXGe5mHnasSRsR6tgMKX3tEqnLe6aKjOuB7udIAJ1nrkJ4Q==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
