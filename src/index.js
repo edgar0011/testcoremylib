@@ -6,6 +6,7 @@ import rxk from '@earlorg/redux-kit'
 import * as redux from '@earlorg/redux-kit/redux'
 // eslint-disable-next-line import/no-unresolved
 import * as utils from '@earlorg/redux-kit/utils'
+import { memoize } from '@earlorg/redux-kit/utils'
 
 import 'core-my-lib/dist/bundle.css'
 
@@ -15,6 +16,9 @@ console.log('rxk')
 console.log(rxk)
 console.log('utils', utils)
 console.log('redux', redux)
+
+console.log('memoize')
+console.log(memoize)
 
 const app = document.getElementById('app')
 ReactDOM.render(

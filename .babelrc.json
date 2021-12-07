@@ -10,10 +10,6 @@
     "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  "ignore": [
-    "**/lodash-es/*",
-    "**/lodash.js"
-  ],
   "plugins": [
     "react-html-attrs",
     "@babel/plugin-proposal-optional-chaining",
