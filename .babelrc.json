@@ -7,6 +7,91 @@
         "targets": "> 0.25%, not dead"
       }
     ],
-    "@babel/preset-react"
-  ]  
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "ignore": [
+    "**/lodash-es/*",
+    "**/lodash.js"
+  ],
+  "plugins": [
+    "react-html-attrs",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-optional-chaining",
+    "@babel/plugin-proposal-nullish-coalescing-operator",
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }],
+    ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+    "@babel/plugin-transform-async-to-generator",
+    ["babel-plugin-styled-components", { "displayName": true, "pure": true }],
+    ["module-resolver", {
+      "alias": {
+        "core-ui": "./packages/ui/src",
+        "core-utils": "./packages/utils/src"
+      }
+    }]
+  ],
+
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-remove-console",
+        "react-html-attrs",
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-syntax-optional-chaining",
+        "@babel/plugin-proposal-nullish-coalescing-operator",
+        "babel-plugin-transform-typescript-metadata",
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        ["@babel/plugin-proposal-private-methods", { "loose": true }],
+        ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+        "@babel/plugin-transform-async-to-generator",
+        ["babel-plugin-styled-components", { "displayName": false, "pure": true }],
+        ["module-resolver", {
+          "alias": {
+            "core-ui": "./packages/ui/src",
+            "core-utils": "./packages/utils/src"
+          }
+        }]
+      ]
+    },
+    "test": {
+      "plugins": [
+        // "transform-remove-console",
+        "react-html-attrs",
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-syntax-optional-chaining",
+        "@babel/plugin-proposal-nullish-coalescing-operator",
+        "babel-plugin-transform-typescript-metadata",
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        ["@babel/plugin-proposal-private-methods", { "loose": true }],
+        ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
+        "@babel/plugin-transform-async-to-generator",
+        ["babel-plugin-styled-components", { "displayName": true, "pure": true }],
+        ["module-resolver", {
+          "alias": {
+            "core-ui": "./packages/ui/src",
+            "core-utils": "./packages/utils/src"
+          }
+        }]
+      ]
+    },
+    "webpack": {
+      "presets": [
+        ["@babel/preset-env",
+          {
+            // "modules": false,
+            "corejs": 3,
+            "useBuiltIns": "usage",
+            "targets": "> 0.25%, not dead"
+          }
+        ],
+        "@babel/preset-react",
+        "@babel/preset-typescript"
+      ]
+    }
+  }
 }

@@ -4,11 +4,6 @@
 # any sections. Set to true to stop .editor config file search on current file
 root = true
 
-# Ignore paths
-[node_modules/**]
-[distServer/**]
-[dist/**]
-[.elasticbeanstalk/**]
 # Global settings
 [*]
 # Indentation style
@@ -38,5 +33,3 @@ insert_final_newline = true
 # Markdown-specific settings
 [*.md]
 trim_trailing_whitespace = false
-
-
