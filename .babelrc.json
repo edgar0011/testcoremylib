@@ -24,8 +24,8 @@
     ["babel-plugin-styled-components", { "displayName": true, "pure": true }],
     ["module-resolver", {
       "alias": {
-        "core-ui": "./packages/ui/src",
-        "core-utils": "./packages/utils/src"
+        "@earlorg/redux-kit/redux": "./node_modules/@earlorg/redux-kit/dist/redux",
+        "@earlorg/redux-kit/utils": "./node_modules/@earlorg/redux-kit/dist/utils"
       }
     }]
   ],
@@ -47,8 +47,8 @@
         ["babel-plugin-styled-components", { "displayName": false, "pure": true }],
         ["module-resolver", {
           "alias": {
-            "core-ui": "./packages/ui/src",
-            "core-utils": "./packages/utils/src"
+            "@earlorg/redux-kit/redux": "./node_modules/@earlorg/redux-kit/dist/redux",
+            "@earlorg/redux-kit/utils": "./node_modules/@earlorg/redux-kit/dist/utils"
           }
         }]
       ]
@@ -69,8 +69,8 @@
         ["babel-plugin-styled-components", { "displayName": true, "pure": true }],
         ["module-resolver", {
           "alias": {
-            "core-ui": "./packages/ui/src",
-            "core-utils": "./packages/utils/src"
+            "@earlorg/redux-kit/redux": "./node_modules/@earlorg/redux-kit/dist/redux",
+            "@earlorg/redux-kit/utils": "./node_modules/@earlorg/redux-kit/dist/utils"
           }
         }]
       ]

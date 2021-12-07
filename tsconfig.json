@@ -11,7 +11,11 @@
     "lib": ["es2015", "es2016", "es2017", "dom"],
     "strict": false,
     "module":"commonjs",
-    "target": "esnext"
+    "target": "esnext",
+    "paths": {
+      "@earlorg/redux-kit/utils": ["./node_modules/@earlorg/redux-kit/dist/utils"],
+      "@earlorg/redux-kit/redux": ["./node_modules/@earlorg/redux-kit/dist/redux"]
+    }
   },
   "include": [
     "src"

@@ -1,4 +1,4 @@
-import * as reduxKit from '@earlorg/redux-kit'
+import * as reduxKit from '@earlorg/redux-kit/redux'
 
 import 'core-my-lib/dist/bundle.css'
 

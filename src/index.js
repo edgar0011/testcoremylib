@@ -2,9 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Token } from 'core-my-lib'
 import rxk from '@earlorg/redux-kit'
-// eslint-disable-next-line import/no-unresolved
 import * as redux from '@earlorg/redux-kit/redux'
-// eslint-disable-next-line import/no-unresolved
 import * as utils from '@earlorg/redux-kit/utils'
 import { memoize } from '@earlorg/redux-kit/utils'
 
